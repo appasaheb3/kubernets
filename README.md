@@ -18,7 +18,7 @@ systemctl enable docker
 ```
 #### Kubernetes Installation
 ```
-sudo curl -s https://packages.cloud.google.com/apt... | sudo apt-key add 
+sudo curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add 
 ```
 ```
 nano /etc/apt/sources.list.d/kubernetes.list
