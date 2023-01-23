@@ -34,6 +34,18 @@ apt-get install -y kubelet kubeadm kubectl kubernetes-cni
 *BOOTSTRAPPING THE MASTER NODE (IN MASTER)*
 ```
 kubeadm init
+
+#if Error occured follow below steps
+apt remove --purge kubelet
+apt install -y kubeadm kubelet=1.25.5-00
+
+wget https://github.com/containerd/containerd/releases/download/v1.6.12/containerd-1.6.12-linux-amd64.tar.gz
+tar xvf containerd-1.6.12-linux-amd64.tar.gz
+systemctl stop containerd
+cd bin
+cp * /usr/bin/
+systemctl start containerd
+
  ```
 
 *COPY THE COMMAND TO RUN IN NODES & SAVE IN NOTEPAD*
