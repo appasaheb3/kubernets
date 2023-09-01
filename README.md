@@ -48,7 +48,7 @@ systemctl start containerd
 
  ```
 
-*COPY THE COMMAND TO RUN IN NODES & SAVE IN NOTEPAD*
+*COPY THE COMMAND TO RUN IN MASTER & SAVE IN NOTEPAD*
 ```
 mkdir -p $HOME/.kube
 cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
